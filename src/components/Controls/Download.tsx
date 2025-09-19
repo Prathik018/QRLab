@@ -1,13 +1,12 @@
-import { Button } from "@/components/ui/button";
 import { downloadQR } from "../../utils/download";
 
 export default function DownloadButton() {
   return (
-    <Button
-      onClick={() => downloadQR()}
-      className="mt-4 bg-black hover:bg-gray-800 text-white border border-gray-600 hover:border-gray-500"
+    <button
+      onClick={() => downloadQR("qrlab-qrcode.png")}
+      className="mt-4 w-full rounded-lg px-4 py-2 bg-gradient-to-r from-qrlabPurple to-purple-600 text-white font-medium hover:opacity-95 transition"
     >
-      Download QR
-    </Button>
+      Download QR as PNG
+    </button>
   );
 }

@@ -1,4 +1,3 @@
-import { Input } from "@/components/ui/input";
 import { useQRStore } from "../../store/useQRStore";
 
 export default function TextInput() {
@@ -6,13 +5,13 @@ export default function TextInput() {
   const setText = useQRStore((s) => s.setText);
 
   return (
-    <div>
-      <label className="block mb-1 font-medium">Content URL or Text</label>
-      <Input
-        type="text"
+    <div className="flex flex-col w-full">
+      <label className="text-sm text-gray-200 mb-2">Content (Text or URL)</label>
+      <input
+        placeholder="Enter URL or plain text..."
         value={text}
         onChange={(e) => setText(e.target.value)}
-        placeholder="Enter URL or text..."
+        className="w-full px-3 py-2 rounded-md bg-white/6 border border-white/10 text-sm text-white placeholder:text-gray-400"
       />
     </div>
   );

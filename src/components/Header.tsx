@@ -1,25 +1,19 @@
-import { Moon, Sun } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { useTheme } from "@/components/theme-provider";
-
 export default function Header() {
-  const { theme, toggleTheme } = useTheme();
 
   return (
-    <div className="w-full flex items-center justify-between px-6 py-4">
-      {/* Logo / Text */}
-      <h1 className="text-2xl font-semibold  text-gray-900 dark:text-white font-serif">
-        QRLab
-      </h1>
+    <header className="sticky top-4 z-30 mx-auto w-full max-w-6xl px-6">
+      <div className="backdrop-blur-md bg-white/6 dark:bg-white/6 rounded-xl border border-white/10 px-4 py-3 flex items-center justify-between shadow-md">
+        <div className="flex items-center gap-3">
+          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-qrlabPurple to-purple-700 flex items-center justify-center text-white font-bold">
+            QL
+          </div>
+          <div>
+            <h1 className="text-lg font-semibold text-violet-300">QRLab</h1>
+            <div className="text-xs text-gray-300">Design & export QR codes</div>
+          </div>
+        </div>
 
-      {/* Theme toggle button */}
-      <Button variant="ghost" size="icon" onClick={toggleTheme}>
-        {theme === "dark" ? (
-          <Sun className="h-5 w-5 text-yellow-500 " />
-        ) : (
-          <Moon className="h-5 w-5 text-gray-900" />
-        )}
-      </Button>
-    </div>
+      </div>
+    </header>
   );
 }
