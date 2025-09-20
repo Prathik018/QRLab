@@ -6,21 +6,18 @@ export default function TextForm() {
   const setText = useQRStore((s) => s.setText);
 
   return (
-    <div>
-      <label className="block mb-1 font-medium text-gray-200">
+    <div className="w-full max-w-full sm:max-w-md mx-auto">
+      <label className="block mb-2 font-medium text-gray-200 text-sm sm:text-base">
         Content URL or Text
       </label>
-      <input
+      <Input
+        className="w-full border border-gray-300 bg-white/10 text-white placeholder-gray-400
+                   px-3 py-2 sm:px-4 sm:py-3 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="Enter URL or text..."
-        className="w-full px-4 py-2 border border-gray-400 rounded-md 
-               text-gray-900 placeholder-gray-400 
-               focus:outline-none focus:ring-2 focus:ring-blue-500 
-               focus:border-blue-500 transition-all duration-200"
       />
     </div>
-
   );
 }
