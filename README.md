@@ -1,18 +1,17 @@
 # QRLab: Modern QR Code Generator
 
 QRLab is a **React + Tailwind CSS powered web app** that lets users generate, style, and download QR codes instantly.  
-With **custom colors, live preview, and theme toggle**, QRLab provides a modern and responsive experience for creating professional QR codes.
+With **custom colors, live preview**, QRLab provides a modern and responsive experience for creating professional QR codes.
 
 ---
 
 ## ✨ Features
 
-- 🎨 **Customizable Colors** → Set foreground and background
-- 🌗 **Light/Dark Mode** with theme toggle
+- 🎨 **Customizable Colors** → Set QR Color and Background color
 - 🔍 **Live QR Preview**
-- 📥 **Download as PNG/SVG**
+- 📥 **Download QR Code**
 - 📱 **Responsive Design** for all devices
-- ⚡ **Modern UI** using Tailwind + Shadcn UI
+- ⚡ **Modern UI** using Tailwind
 
 ---
 
@@ -21,6 +20,7 @@ With **custom colors, live preview, and theme toggle**, QRLab provides a modern 
 **Frontend**
 - React  
 - Tailwind CSS  
+- Patterncraft
 - Shadcn UI / Custom Components  
 - Lucide Icons  
 
